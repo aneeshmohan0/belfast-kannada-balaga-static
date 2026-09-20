@@ -71,6 +71,17 @@
     .sponsor img { max-width: 100%; max-height: 110px; width: auto; height: auto; object-fit: contain; }
     .sponsor-note { margin-top: 18px; color: var(--muted); font-size: .98rem; }
     .connect { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    .history { background: var(--paper); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .timeline { position: relative; display: grid; gap: 26px; max-width: 860px; }
+    .timeline:before { content: ""; position: absolute; left: 92px; top: 10px; bottom: 10px; width: 2px; background: linear-gradient(var(--gold), var(--saffron), var(--green)); border-radius: 2px; }
+    .tl { display: grid; grid-template-columns: 76px 1fr; gap: 32px; align-items: start; position: relative; }
+    .tl .when { text-align: right; font-weight: 800; color: var(--saffron-dark); font-size: 1.05rem; line-height: 1.3; padding-top: 2px; }
+    .tl .when small { display: block; font-weight: 600; color: var(--muted); font-size: .8rem; }
+    .tl:after { content: ""; position: absolute; left: 86px; top: 7px; width: 14px; height: 14px; border-radius: 50%; background: var(--saffron); border: 3px solid var(--paper); box-shadow: 0 0 0 2px var(--saffron); }
+    .tl .what h3 { margin: 0 0 8px; font-size: 1.2rem; }
+    .tl .what p { margin: 0 0 10px; color: #444b56; }
+    .tl .what p:last-child { margin-bottom: 0; }
+    .history-close { max-width: 860px; margin-top: 34px; padding: 22px 26px; border-radius: 18px; background: #fff7e9; border: 1px solid var(--line); font-size: 1.08rem; }
     .past-head { margin-top: 44px; margin-bottom: 18px; }
     .past-head h3 { font-size: 1.7rem; margin: 6px 0 4px; letter-spacing: -.02em; }
     .past-head p { color: var(--muted); margin: 0; }
@@ -102,6 +113,10 @@
       .hero-logo { width: 110px; }
       .mark { width: 52px; height: 52px; }
       .past { grid-template-columns: 1fr; }
+      .timeline:before { left: 7px; }
+      .tl { grid-template-columns: 1fr; gap: 6px; padding-left: 30px; }
+      .tl .when { text-align: left; }
+      .tl:after { left: 1px; }
     }
   </style>
 </head>
@@ -110,7 +125,7 @@
     <div class="wrap nav-inner">
       <a class="brand" href="#home"><img class="mark" src="assets/logo.png" alt="Kannada Balaga Belfast logo" width="64" height="64" /><span>Belfast Kannada Balaga</span></a>
       <div class="links">
-        <a href="#about">About</a><a href="#events">Events</a><a href="#sponsors">Sponsors</a><a href="#connect">Connect</a><a href="#volunteer">Volunteer</a>
+        <a href="#about">About</a><a href="#history">History</a><a href="#events">Events</a><a href="#sponsors">Sponsors</a><a href="#connect">Connect</a><a href="#volunteer">Volunteer</a>
         <a class="btn primary" href="https://www.tickettailor.com/events/belfastkannadabalaga/2404639" target="_blank" rel="noreferrer">Book Tickets</a>
       </div>
     </div>
@@ -154,6 +169,19 @@
           <article class="card"><div class="icon">🤝</div><h3>Community</h3><p>Build meaningful connections for Kannadigas and the wider Belfast community.</p></article>
           <article class="card"><div class="icon">🌱</div><h3>Families & Youth</h3><p>Create welcoming opportunities for children, young people and families to participate.</p></article>
         </div>
+      </div>
+    </section>
+
+    <section id="history" class="history">
+      <div class="wrap">
+        <div class="section-head"><span class="eyebrow">Our history</span><h2>Belfast Kannada Balaga – History</h2><p>From an informal cultural gathering in 2005 to a growing community organisation today.</p></div>
+        <div class="timeline">
+          <div class="tl"><div class="when">2005<small>The roots</small></div><div class="what"><h3>Where it began</h3><p>The roots of Belfast Kannada Balaga go back to 2005, when the Kannada community in Belfast began coming together through cultural activities. One of the early milestones was the UK Kannada Balaga Annual Gathering, held on 26–27 at the Indian Community Centre in Belfast under the leadership of Dr. Jayaprakash.</p><p>The event also featured a memorable Kathak dance performance by renowned dancer Tirupatha Rajendra, bringing a strong Kannada cultural presence to Belfast.</p></div></div>
+          <div class="tl"><div class="when">2011<small>Regular gatherings</small></div><div class="what"><h3>Rajyothsava begins</h3><p>A more regular community gathering began around 2011, when enthusiastic Kannada families in Belfast started creating opportunities for Kannadigas to meet twice a year, helping people connect, build friendships and strengthen the local Kannada community. It was also in 2011 that the Balaga began celebrating Kannada Rajyothsava in Belfast.</p></div></div>
+          <div class="tl"><div class="when">2012<small>onwards</small></div><div class="what"><h3>Growing together</h3><p>Over the following years, Belfast Kannada Balaga continued to grow. Alongside the annual Kannada Rajyotsava celebration, the community began organising annual social gatherings, bringing Kannada families together through culture, friendship and celebration.</p></div></div>
+          <div class="tl"><div class="when">2022<small>onwards</small></div><div class="what"><h3>A new phase</h3><p>From 2022 onwards, the Balaga entered a new phase of development with greater involvement from volunteers. Activities became more organised, with a renewed focus on Kannada language, culture, community participation and volunteering.</p><p>Belfast Kannada Balaga has gradually developed from an informal cultural gathering into a growing community organisation. Alongside cultural programmes, members have also participated in wider community initiatives and worked with other organisations in Belfast.</p><p>The Balaga also organises social gatherings that give new Kannada families and members an opportunity to meet one another, build friendships and become part of the wider Kannada community in Belfast.</p></div></div>
+        </div>
+        <p class="history-close">Today, Belfast Kannada Balaga continues to bring Kannadigas together while promoting Kannada language, culture, friendship, volunteering and community spirit in Northern Ireland.</p>
       </div>
     </section>
 
