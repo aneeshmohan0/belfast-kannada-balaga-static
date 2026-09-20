@@ -67,7 +67,12 @@
     .sponsor { min-height: 150px; border: 1px solid var(--line); border-radius: 18px; background: var(--paper); display: grid; place-items: center; padding: 22px; box-shadow: 0 10px 28px rgba(48,37,21,.045); }
     .sponsor img { max-width: 100%; max-height: 110px; width: auto; height: auto; object-fit: contain; }
     .sponsor-note { margin-top: 18px; color: var(--muted); font-size: .98rem; }
-    .connect { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .connect { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    .glimpses { margin-top: 18px; background: var(--paper); border: 1px solid var(--line); border-radius: 30px; padding: 32px 36px; display: grid; grid-template-columns: 1fr auto; gap: 22px; align-items: center; box-shadow: 0 10px 28px rgba(48,37,21,.045); }
+    .glimpses p { color: var(--muted); margin: 6px 0 0; }
+    .glimpses .actions { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn.youtube { background: #ff0000; color: white; box-shadow: 0 10px 24px rgba(255,0,0,.18); }
+    .btn.youtube:hover { background: #cc0000; transform: translateY(-1px); }
     .connect .card p { color: var(--muted); margin: 6px 0 14px; }
     .connect .card a.link { color: var(--saffron-dark); font-weight: 700; word-break: break-word; }
     .btn.small { min-height: 40px; padding: 0 16px; font-size: .92rem; }
@@ -82,7 +87,7 @@
     .footer-grid { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; border-top: 1px solid var(--line); padding-top: 26px; }
     @media (max-width: 860px) {
       .links a:not(.btn) { display: none; }
-      .hero-grid, .event-strip, .cta { grid-template-columns: 1fr; }
+      .hero-grid, .event-strip, .cta, .glimpses { grid-template-columns: 1fr; }
       .cards, .sponsors, .connect { grid-template-columns: 1fr; }
       .hero { padding-top: 56px; }
     }
@@ -146,6 +151,10 @@
           <div><strong style="color:#f8b557">1 November 2026</strong><h2 style="margin:6px 0 0">Belfast Kannada Rajyotsava 2026</h2><p>St. Anne's Parish Centre, Kingsway, Belfast, BT10 0NE</p></div>
           <a class="btn primary" href="https://www.tickettailor.com/events/belfastkannadabalaga/2404639" target="_blank" rel="noreferrer">Book Tickets</a>
         </div>
+        <div class="glimpses">
+          <div><span class="eyebrow">Looking back</span><h3 style="font-size:1.6rem;margin:8px 0 0;line-height:1.15">Glimpses of Kannada Rajyothsava 2025</h3><p>Relive last year's celebration: browse the photo album and watch the performances from the evening.</p></div>
+          <div class="actions"><a class="btn ghost" href="https://photos.app.goo.gl/QBGgY3w55eyToS6q9" target="_blank" rel="noreferrer">📷 View photo album</a><a class="btn youtube" href="https://www.youtube.com/playlist?list=PLkMQX_nIOSlULUUYVjB8WuRfe9FUBAhAT" target="_blank" rel="noreferrer">▶ Watch performances</a></div>
+        </div>
       </div>
     </section>
 
@@ -167,6 +176,7 @@
         <div class="connect">
           <article class="card"><div class="icon">✉️</div><h3>General enquiries</h3><p>Email us about events, membership, sponsorship or anything else.</p><a class="link" href="mailto:kannada.balaga.belfast@gmail.com">kannada.balaga.belfast@gmail.com</a></article>
           <article class="card"><div class="icon">📸</div><h3>Instagram</h3><p>Follow <strong>@belfast_kannada_balaga</strong> for photos, event updates and community stories.</p><a class="btn insta small" href="https://www.instagram.com/belfast_kannada_balaga" target="_blank" rel="noreferrer">Follow us on Instagram</a></article>
+          <article class="card"><div class="icon">▶️</div><h3>YouTube</h3><p>Subscribe to our channel for full performances, event highlights and recordings.</p><a class="btn youtube small" href="https://www.youtube.com/@belfastkannadabalaga" target="_blank" rel="noreferrer">Subscribe on YouTube</a></article>
           <article class="card"><div class="icon">💬</div><h3>WhatsApp group</h3><p>We have a community WhatsApp group. Contact <strong>Mohan Puttamadaiah</strong> on <a class="link" href="tel:+447438554831">+44 7438 554831</a> to be added.</p><a class="btn whatsapp small" href="https://wa.me/447438554831?text=Hi%20Mohan%2C%20please%20add%20me%20to%20the%20Belfast%20Kannada%20Balaga%20WhatsApp%20group." target="_blank" rel="noreferrer">Message on WhatsApp</a></article>
         </div>
       </div>
@@ -185,7 +195,7 @@
   <footer>
     <div class="wrap footer-grid">
       <div><strong>Belfast Kannada Balaga</strong><br/>Kannada • Culture • Community</div>
-      <div class="footer-contact">Community contact: Mohan Puttamadaiah · <a href="tel:+447438554831">+44 7438 554831</a><br/>Email: <a href="mailto:kannada.balaga.belfast@gmail.com">kannada.balaga.belfast@gmail.com</a> · Instagram: <a href="https://www.instagram.com/belfast_kannada_balaga" target="_blank" rel="noreferrer">@belfast_kannada_balaga</a><br/>© 2005 Belfast Kannada Balaga</div>
+      <div class="footer-contact">Community contact: Mohan Puttamadaiah · <a href="tel:+447438554831">+44 7438 554831</a><br/>Email: <a href="mailto:kannada.balaga.belfast@gmail.com">kannada.balaga.belfast@gmail.com</a> · Instagram: <a href="https://www.instagram.com/belfast_kannada_balaga" target="_blank" rel="noreferrer">@belfast_kannada_balaga</a> · YouTube: <a href="https://www.youtube.com/@belfastkannadabalaga" target="_blank" rel="noreferrer">@belfastkannadabalaga</a><br/>© 2005 Belfast Kannada Balaga</div>
     </div>
   </footer>
 </body>
