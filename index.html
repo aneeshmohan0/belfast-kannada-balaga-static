@@ -33,9 +33,12 @@
     a { color: inherit; text-decoration: none; }
     .wrap { width: min(1120px, calc(100% - 36px)); margin: 0 auto; }
     .nav { position: sticky; top: 0; z-index: 20; backdrop-filter: blur(14px); background: rgba(255,250,242,.9); border-bottom: 1px solid rgba(234,223,206,.8); }
-    .nav-inner { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .nav-inner { min-height: 84px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
     .brand { display: flex; align-items: center; gap: 12px; font-weight: 800; }
-    .mark { width: 46px; height: 46px; object-fit: contain; display: block; }
+    .mark { width: 64px; height: 64px; object-fit: contain; display: block; }
+    .hero-logo { width: 150px; height: auto; display: block; margin-bottom: 18px; filter: drop-shadow(0 10px 22px rgba(48,37,21,.16)); }
+    .footer-brand { display: flex; align-items: center; gap: 14px; }
+    .footer-brand img { width: 72px; height: 72px; object-fit: contain; }
     .links { display: flex; gap: 22px; align-items: center; font-size: .95rem; color: #444b56; }
     .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 0 18px; border-radius: 999px; font-weight: 700; border: 1px solid transparent; transition: .2s ease; }
     .btn.primary { background: var(--saffron); color: white; box-shadow: 0 10px 24px rgba(217,108,31,.22); }
@@ -68,9 +71,15 @@
     .sponsor img { max-width: 100%; max-height: 110px; width: auto; height: auto; object-fit: contain; }
     .sponsor-note { margin-top: 18px; color: var(--muted); font-size: .98rem; }
     .connect { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
-    .glimpses { margin-top: 18px; background: var(--paper); border: 1px solid var(--line); border-radius: 30px; padding: 32px 36px; display: grid; grid-template-columns: 1fr auto; gap: 22px; align-items: center; box-shadow: 0 10px 28px rgba(48,37,21,.045); }
-    .glimpses p { color: var(--muted); margin: 6px 0 0; }
-    .glimpses .actions { display: flex; gap: 12px; flex-wrap: wrap; }
+    .past-head { margin-top: 44px; margin-bottom: 18px; }
+    .past-head h3 { font-size: 1.7rem; margin: 6px 0 4px; letter-spacing: -.02em; }
+    .past-head p { color: var(--muted); margin: 0; }
+    .past { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .past .card { display: flex; flex-direction: column; }
+    .past .card .year { color: var(--saffron); font-weight: 800; font-size: .9rem; letter-spacing: .04em; }
+    .past .card h4 { margin: 6px 0 8px; font-size: 1.2rem; line-height: 1.2; }
+    .past .card p { color: var(--muted); margin: 0 0 16px; flex: 1; }
+    .past .actions { display: flex; gap: 10px; flex-wrap: wrap; }
     .btn.youtube { background: #ff0000; color: white; box-shadow: 0 10px 24px rgba(255,0,0,.18); }
     .btn.youtube:hover { background: #cc0000; transform: translateY(-1px); }
     .connect .card p { color: var(--muted); margin: 6px 0 14px; }
@@ -87,16 +96,19 @@
     .footer-grid { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; border-top: 1px solid var(--line); padding-top: 26px; }
     @media (max-width: 860px) {
       .links a:not(.btn) { display: none; }
-      .hero-grid, .event-strip, .cta, .glimpses { grid-template-columns: 1fr; }
+      .hero-grid, .event-strip, .cta { grid-template-columns: 1fr; }
       .cards, .sponsors, .connect { grid-template-columns: 1fr; }
       .hero { padding-top: 56px; }
+      .hero-logo { width: 110px; }
+      .mark { width: 52px; height: 52px; }
+      .past { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
   <nav class="nav">
     <div class="wrap nav-inner">
-      <a class="brand" href="#home"><img class="mark" src="assets/logo.png" alt="Kannada Balaga Belfast logo" width="46" height="46" /><span>Belfast Kannada Balaga</span></a>
+      <a class="brand" href="#home"><img class="mark" src="assets/logo.png" alt="Kannada Balaga Belfast logo" width="64" height="64" /><span>Belfast Kannada Balaga</span></a>
       <div class="links">
         <a href="#about">About</a><a href="#events">Events</a><a href="#sponsors">Sponsors</a><a href="#connect">Connect</a><a href="#volunteer">Volunteer</a>
         <a class="btn primary" href="https://www.tickettailor.com/events/belfastkannadabalaga/2404639" target="_blank" rel="noreferrer">Book Tickets</a>
@@ -108,6 +120,7 @@
     <header class="hero">
       <div class="wrap hero-grid">
         <div>
+          <img class="hero-logo" src="assets/logo.png" alt="ಕನ್ನಡ ಬಳಗ Belfast, UK" width="150" height="134" />
           <span class="eyebrow">Kannada • Culture • Community</span>
           <h1><span class="kannada">ಬೆಲ್ಫಾಸ್ಟ್</span><br/>Kannada Balaga</h1>
           <p class="lead">Bringing Kannadigas and friends together in Northern Ireland through language, culture, family activities and community celebrations.</p>
@@ -122,7 +135,7 @@
           <div class="meta">
             <div><strong>📅 Date</strong><br/>1 November 2026</div>
             <div><strong>📍 Venue</strong><br/>St. Anne's Parish Centre<br/>Kingsway, Belfast, BT10 0NE</div>
-            <div><strong>🎟 Tickets</strong><br/>£25 per person + booking fee</div>
+            <div><strong>🎟 Tickets</strong><br/>£25 per person (early bird offer)</div>
           </div>
           <a class="btn primary" style="width:100%" href="https://www.tickettailor.com/events/belfastkannadabalaga/2404639" target="_blank" rel="noreferrer">Get Rajyotsava Tickets</a>
         </aside>
@@ -151,9 +164,11 @@
           <div><strong style="color:#f8b557">1 November 2026</strong><h2 style="margin:6px 0 0">Belfast Kannada Rajyotsava 2026</h2><p>St. Anne's Parish Centre, Kingsway, Belfast, BT10 0NE</p></div>
           <a class="btn primary" href="https://www.tickettailor.com/events/belfastkannadabalaga/2404639" target="_blank" rel="noreferrer">Book Tickets</a>
         </div>
-        <div class="glimpses">
-          <div><span class="eyebrow">Looking back</span><h3 style="font-size:1.6rem;margin:8px 0 0;line-height:1.15">Glimpses of Kannada Rajyothsava 2025</h3><p>Relive last year's celebration: browse the photo album and watch the performances from the evening.</p></div>
-          <div class="actions"><a class="btn ghost" href="https://photos.app.goo.gl/QBGgY3w55eyToS6q9" target="_blank" rel="noreferrer">📷 View photo album</a><a class="btn youtube" href="https://youtube.com/playlist?list=PLkMQX_nIOSlULUUYVjB8WuRfe9FUBAhAT&amp;si=szpahr4Z55OKx1UM" target="_blank" rel="noreferrer">▶ Watch performances</a></div>
+        <div class="past-head"><span class="eyebrow">Looking back</span><h3>Glimpses of our past events</h3><p>Relive the celebrations through photos and performance recordings.</p></div>
+        <div class="past">
+          <article class="card"><span class="year">2025</span><h4>Kannada Rajyothsava 2025</h4><p>Our flagship celebration with performances, food and Kannada pride.</p><div class="actions"><a class="btn ghost small" href="https://photos.app.goo.gl/QBGgY3w55eyToS6q9" target="_blank" rel="noreferrer">📷 Photo album</a><a class="btn youtube small" href="https://youtube.com/playlist?list=PLkMQX_nIOSlULUUYVjB8WuRfe9FUBAhAT&amp;si=szpahr4Z55OKx1UM" target="_blank" rel="noreferrer">▶ Performances</a></div></article>
+          <article class="card"><span class="year">2025</span><h4>Sneha Sangama 2025</h4><p>A friendly get-together bringing families and friends of the Balaga closer.</p><div class="actions"><a class="btn ghost small" href="https://photos.app.goo.gl/3TaAfmCGaNAuVvn96" target="_blank" rel="noreferrer">📷 Photo album</a></div></article>
+          <article class="card"><span class="year">2024</span><h4>Kannada Rajyothsava 2024</h4><p>Looking back at the 2024 Rajyothsava celebration in Belfast.</p><div class="actions"><a class="btn ghost small" href="https://photos.app.goo.gl/w95PqY6pK6jHV1cM8" target="_blank" rel="noreferrer">📷 Photo album</a></div></article>
         </div>
       </div>
     </section>
@@ -194,7 +209,7 @@
 
   <footer>
     <div class="wrap footer-grid">
-      <div><strong>Belfast Kannada Balaga</strong><br/>Kannada • Culture • Community</div>
+      <div class="footer-brand"><img src="assets/logo.png" alt="" width="72" height="72" /><div><strong>Belfast Kannada Balaga</strong><br/>Kannada • Culture • Community</div></div>
       <div class="footer-contact">Community contact: Mohan Puttamadaiah · <a href="tel:+447438554831">+44 7438 554831</a><br/>Email: <a href="mailto:kannada.balaga.belfast@gmail.com">kannada.balaga.belfast@gmail.com</a> · Instagram: <a href="https://www.instagram.com/belfast_kannada_balaga" target="_blank" rel="noreferrer">@belfast_kannada_balaga</a> · YouTube: <a href="https://www.youtube.com/@belfastkannadabalaga" target="_blank" rel="noreferrer">@belfastkannadabalaga</a><br/>© 2005 Belfast Kannada Balaga</div>
     </div>
   </footer>
