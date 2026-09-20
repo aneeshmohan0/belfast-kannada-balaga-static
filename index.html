@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Belfast Kannada Balaga — celebrating Kannada language, culture and community in Northern Ireland." />
   <title>Belfast Kannada Balaga</title>
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+  <link rel="apple-touch-icon" href="assets/logo.png" />
+  <meta property="og:title" content="Belfast Kannada Balaga" />
+  <meta property="og:description" content="Celebrating Kannada language, culture and community in Northern Ireland." />
+  <meta property="og:image" content="assets/logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Kannada:wght@400;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -30,7 +35,7 @@
     .nav { position: sticky; top: 0; z-index: 20; backdrop-filter: blur(14px); background: rgba(255,250,242,.9); border-bottom: 1px solid rgba(234,223,206,.8); }
     .nav-inner { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
     .brand { display: flex; align-items: center; gap: 12px; font-weight: 800; }
-    .mark { width: 42px; height: 42px; border-radius: 50%; background: conic-gradient(var(--saffron) 0 33%, var(--paper) 33% 66%, var(--green) 66%); border: 1px solid var(--line); box-shadow: 0 6px 16px rgba(0,0,0,.08); }
+    .mark { width: 46px; height: 46px; object-fit: contain; display: block; }
     .links { display: flex; gap: 22px; align-items: center; font-size: .95rem; color: #444b56; }
     .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 0 18px; border-radius: 999px; font-weight: 700; border: 1px solid transparent; transition: .2s ease; }
     .btn.primary { background: var(--saffron); color: white; box-shadow: 0 10px 24px rgba(217,108,31,.22); }
@@ -75,7 +80,7 @@
 <body>
   <nav class="nav">
     <div class="wrap nav-inner">
-      <a class="brand" href="#home"><span class="mark" aria-hidden="true"></span><span>Belfast Kannada Balaga</span></a>
+      <a class="brand" href="#home"><img class="mark" src="assets/logo.png" alt="Kannada Balaga Belfast logo" width="46" height="46" /><span>Belfast Kannada Balaga</span></a>
       <div class="links">
         <a href="#about">About</a><a href="#events">Events</a><a href="#sponsors">Sponsors</a><a href="#volunteer">Volunteer</a>
         <a class="btn primary" href="https://www.tickettailor.com/events/belfastkannadabalaga/2404639" target="_blank" rel="noreferrer">Book Tickets</a>
@@ -153,7 +158,7 @@
   <footer>
     <div class="wrap footer-grid">
       <div><strong>Belfast Kannada Balaga</strong><br/>Kannada • Culture • Community</div>
-      <div>Community contacts: Neha & Nousheen<br/>© 2026 Belfast Kannada Balaga</div>
+      <div>Community contact: Mohan Puttamadaiah · <a href="tel:+447438554831">+44 7438 554831</a><br/>© 2026 Belfast Kannada Balaga</div>
     </div>
   </footer>
 </body>
