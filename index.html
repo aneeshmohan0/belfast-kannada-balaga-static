@@ -64,7 +64,18 @@
     .event-strip { background: #1e2430; color: white; border-radius: 30px; padding: 36px; display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: center; }
     .event-strip p { color: #c9ced7; margin: 6px 0 0; }
     .sponsors { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-    .sponsor { min-height: 130px; border: 1px dashed #d5c4ab; border-radius: 18px; background: rgba(255,255,255,.5); display: grid; place-items: center; color: #9a8568; font-weight: 700; }
+    .sponsor { min-height: 150px; border: 1px solid var(--line); border-radius: 18px; background: var(--paper); display: grid; place-items: center; padding: 22px; box-shadow: 0 10px 28px rgba(48,37,21,.045); }
+    .sponsor img { max-width: 100%; max-height: 110px; width: auto; height: auto; object-fit: contain; }
+    .sponsor-note { margin-top: 18px; color: var(--muted); font-size: .98rem; }
+    .connect { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .connect .card p { color: var(--muted); margin: 6px 0 14px; }
+    .connect .card a.link { color: var(--saffron-dark); font-weight: 700; word-break: break-word; }
+    .btn.small { min-height: 40px; padding: 0 16px; font-size: .92rem; }
+    .btn.whatsapp { background: #25d366; color: #073b1e; box-shadow: 0 10px 24px rgba(37,211,102,.22); }
+    .btn.whatsapp:hover { background: #1fb457; transform: translateY(-1px); }
+    .btn.insta { background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af); color: white; }
+    .btn.insta:hover { filter: brightness(1.08); transform: translateY(-1px); }
+    .footer-contact a { color: var(--saffron-dark); font-weight: 600; }
     .cta { background: linear-gradient(135deg, #d96c1f, #b15318); color: white; border-radius: 30px; padding: 44px; display: grid; grid-template-columns: 1fr auto; gap: 22px; align-items: center; }
     .cta p { color: #ffe8d5; margin-bottom: 0; }
     footer { padding: 42px 0 54px; color: var(--muted); font-size: .95rem; }
@@ -72,7 +83,7 @@
     @media (max-width: 860px) {
       .links a:not(.btn) { display: none; }
       .hero-grid, .event-strip, .cta { grid-template-columns: 1fr; }
-      .cards, .sponsors { grid-template-columns: 1fr; }
+      .cards, .sponsors, .connect { grid-template-columns: 1fr; }
       .hero { padding-top: 56px; }
     }
   </style>
@@ -82,7 +93,7 @@
     <div class="wrap nav-inner">
       <a class="brand" href="#home"><img class="mark" src="assets/logo.png" alt="Kannada Balaga Belfast logo" width="46" height="46" /><span>Belfast Kannada Balaga</span></a>
       <div class="links">
-        <a href="#about">About</a><a href="#events">Events</a><a href="#sponsors">Sponsors</a><a href="#volunteer">Volunteer</a>
+        <a href="#about">About</a><a href="#events">Events</a><a href="#sponsors">Sponsors</a><a href="#connect">Connect</a><a href="#volunteer">Volunteer</a>
         <a class="btn primary" href="https://www.tickettailor.com/events/belfastkannadabalaga/2404639" target="_blank" rel="noreferrer">Book Tickets</a>
       </div>
     </div>
@@ -140,8 +151,24 @@
 
     <section id="sponsors">
       <div class="wrap">
-        <div class="section-head"><span class="eyebrow">Supporters</span><h2>Sponsors are welcome</h2><p>Support Belfast Kannada Balaga and help us create memorable community events.</p></div>
-        <div class="sponsors"><div class="sponsor">Sponsor space 1</div><div class="sponsor">Sponsor space 2</div><div class="sponsor">Sponsor space 3</div></div>
+        <div class="section-head"><span class="eyebrow">Supporters</span><h2>Our sponsors</h2><p>Thank you to the businesses who support Belfast Kannada Balaga and help us create memorable community events.</p></div>
+        <div class="sponsors">
+          <div class="sponsor"><img src="assets/sponsors/indian-curry-point.jpg" alt="Indian Curry Point" loading="lazy" /></div>
+          <div class="sponsor"><img src="assets/sponsors/my-spice-market.png" alt="My Spice Market – Your Online Indian Store" loading="lazy" /></div>
+          <div class="sponsor"><img src="assets/sponsors/guide-financial-services.jpg" alt="Guide Financial Services – Mortgages &amp; Protection" loading="lazy" /></div>
+        </div>
+        <p class="sponsor-note">New sponsors are always welcome. Email <a href="mailto:kannada.balaga.belfast@gmail.com" style="color:var(--saffron-dark);font-weight:700">kannada.balaga.belfast@gmail.com</a> to find out more.</p>
+      </div>
+    </section>
+
+    <section id="connect">
+      <div class="wrap">
+        <div class="section-head"><span class="eyebrow">Stay connected</span><h2>Get in touch and follow along</h2><p>Questions, ideas or just want to say namaskara? Here is how to reach us and keep up with what we are doing.</p></div>
+        <div class="connect">
+          <article class="card"><div class="icon">✉️</div><h3>General enquiries</h3><p>Email us about events, membership, sponsorship or anything else.</p><a class="link" href="mailto:kannada.balaga.belfast@gmail.com">kannada.balaga.belfast@gmail.com</a></article>
+          <article class="card"><div class="icon">📸</div><h3>Instagram</h3><p>Follow <strong>@belfast_kannada_balaga</strong> for photos, event updates and community stories.</p><a class="btn insta small" href="https://www.instagram.com/belfast_kannada_balaga" target="_blank" rel="noreferrer">Follow us on Instagram</a></article>
+          <article class="card"><div class="icon">💬</div><h3>WhatsApp group</h3><p>We have a community WhatsApp group. Contact <strong>Mohan Puttamadaiah</strong> on <a class="link" href="tel:+447438554831">+44 7438 554831</a> to be added.</p><a class="btn whatsapp small" href="https://wa.me/447438554831?text=Hi%20Mohan%2C%20please%20add%20me%20to%20the%20Belfast%20Kannada%20Balaga%20WhatsApp%20group." target="_blank" rel="noreferrer">Message on WhatsApp</a></article>
+        </div>
       </div>
     </section>
 
@@ -149,7 +176,7 @@
       <div class="wrap">
         <div class="cta">
           <div><span style="font-weight:700;opacity:.9">Get involved</span><h2 style="font-size:2.5rem;line-height:1.1;margin:8px 0">Volunteer with Belfast Kannada Balaga</h2><p>Help with events, cultural programmes, family activities, sponsorship, communications or community outreach.</p></div>
-          <a class="btn ghost" style="background:white;color:#8f4314" href="mailto:hello@belfastkannadabalaga.org.uk">Contact us</a>
+          <a class="btn ghost" style="background:white;color:#8f4314" href="mailto:kannada.balaga.belfast@gmail.com">Contact us</a>
         </div>
       </div>
     </section>
@@ -158,7 +185,7 @@
   <footer>
     <div class="wrap footer-grid">
       <div><strong>Belfast Kannada Balaga</strong><br/>Kannada • Culture • Community</div>
-      <div>Community contact: Mohan Puttamadaiah · <a href="tel:+447438554831">+44 7438 554831</a><br/>© 2026 Belfast Kannada Balaga</div>
+      <div class="footer-contact">Community contact: Mohan Puttamadaiah · <a href="tel:+447438554831">+44 7438 554831</a><br/>Email: <a href="mailto:kannada.balaga.belfast@gmail.com">kannada.balaga.belfast@gmail.com</a> · Instagram: <a href="https://www.instagram.com/belfast_kannada_balaga" target="_blank" rel="noreferrer">@belfast_kannada_balaga</a><br/>© 2005 Belfast Kannada Balaga</div>
     </div>
   </footer>
 </body>
