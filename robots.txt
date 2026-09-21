@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.belfastkannadabalaga.co.uk/sitemap.xml
